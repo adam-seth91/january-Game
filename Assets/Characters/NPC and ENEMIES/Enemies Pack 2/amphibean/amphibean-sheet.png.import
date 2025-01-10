@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://0uo7b6e0550a"
+path="res://.godot/imported/amphibean-sheet.png-f23ca2a1f609a59d0b8013ba4b1c683c.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Characters/NPC and ENEMIES/Enemies Pack 2/amphibean/amphibean-sheet.png"
+dest_files=["res://.godot/imported/amphibean-sheet.png-f23ca2a1f609a59d0b8013ba4b1c683c.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
