@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://cioqevj7qcqc7"]
+
+[ext_resource type="Script" path="res://Scenes/character_body_2d.gd" id="1_123k5"]
+[ext_resource type="Texture2D" uid="uid://bq2serym841gv" path="res://Assets/Characters/NPC and ENEMIES/Enemies pack 3/Warlock/warlock-sheet.png" id="1_kn44d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha5uw"]
+atlas = ExtResource("1_kn44d")
+region = Rect2(0, 0, 67, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivgdr"]
+atlas = ExtResource("1_kn44d")
+region = Rect2(67, 0, 67, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcwsj"]
+atlas = ExtResource("1_kn44d")
+region = Rect2(134, 0, 67, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je32y"]
+atlas = ExtResource("1_kn44d")
+region = Rect2(201, 0, 67, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ebf2"]
+atlas = ExtResource("1_kn44d")
+region = Rect2(0, 56, 67, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pa8b3"]
+atlas = ExtResource("1_kn44d")
+region = Rect2(67, 56, 67, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n0bd"]
+atlas = ExtResource("1_kn44d")
+region = Rect2(134, 56, 67, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfes0"]
+atlas = ExtResource("1_kn44d")
+region = Rect2(201, 56, 67, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8fyaa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha5uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivgdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcwsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je32y")
+}],
+"loop": true,
+"name": &"warlock_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ebf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pa8b3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2n0bd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfes0")
+}],
+"loop": true,
+"name": &"warlock_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1es5t"]
+radius = 20.0
+height = 48.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_123k5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_8fyaa")
+animation = &"warlock_walk"
+frame_progress = 0.707185
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_1es5t")

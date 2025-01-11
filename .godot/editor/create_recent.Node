@@ -1,9 +1,9 @@
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
 Camera2D
 Area2D
 Sprite2D
 ParallaxLayer
 TileMap
-CollisionShape2D
-AnimatedSprite2D
-CharacterBody2D
 ParallaxBackground
