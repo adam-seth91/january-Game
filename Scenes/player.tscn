@@ -126,18 +126,27 @@ radius = 9.0
 height = 46.0
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(-97, -21)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(97, 21)
 script = ExtResource("1_xsccd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -36)
 sprite_frames = SubResource("SpriteFrames_jel44")
 animation = &"idle"
 frame_progress = 0.636592
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 35)
+position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_d8jqw")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(0, -2)
 process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_right = 800
+limit_bottom = 250
+limit_smoothed = true
